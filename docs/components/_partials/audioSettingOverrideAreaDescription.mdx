@@ -1,0 +1,33 @@
+﻿import VoiceSettingParameter from './voiceSettingParameter.mdx'
+import AvatarAudioSettingParameter from './avatarAudioSettingParameter.mdx'
+
+:::warning
+このコンポーネントは全員のクライアント内で存在しアクティブである必要があります。
+クライアント間でオブジェクトの状態に矛盾がある場合、防音自体は動作しますが、音声設定が反映されない可能性があります。
+:::
+---
+## パラメータ説明
+#### オーバーライドID
+オーバーライドIDです。
+
+:::danger[警告]
+同じIDが複数に定義されると、音声設定が正しく反映されません。
+必ずオーバーライド毎に一意のIDを指定してください。
+:::
+
+#### 優先度
+オーバーライドの優先度を指定できます。
+値が大きいオーバーライドが優先されます。
+同値の場合、後に適用したオーバーライドが優先されます。
+
+- デフォルト : 0
+
+### 音声設定 - 声設定
+声の音声設定を指定できます。
+
+<VoiceSettingParameter/>
+
+### 音声設定 - アバター音声設定
+アバター内に組み込まれているオーディオソースの音声設定を指定できます
+
+<AvatarAudioSettingParameter/>

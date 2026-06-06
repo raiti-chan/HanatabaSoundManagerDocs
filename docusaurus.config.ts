@@ -16,7 +16,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://raiti-chan.hsm.docs.hanataba.raitichan.net.io/',
+  url: 'https://hsm.docs.hanataba.raitichan.net/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
