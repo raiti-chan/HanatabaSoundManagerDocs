@@ -1,5 +1,44 @@
 ---
+id: intro
 sidebar_position: 1
 ---
 
 # チュートリアル
+
+## セットアップ
+
+`Assets/Hanataba/Udon/HanatabaSoundManager/Prefab/PlayerSoundManager.prefab` をシーン上に配置する。
+:::info
+[PlayerSoundManager](doc:PlayerSoundManager) がシーン上に必須です。
+
+空のゲームオブジェクトに追加もできますがプレハブを使用することを推奨します。
+:::
+
+## 防音室を設置する
+
+1. `Assets/Hanataba/Udon/HanatabaSoundManager/Prefab/Area/`内のプレハブをシーン上に配置する。
+2. 一意のエリアIDを設定する。
+3. コライダーの範囲を調整する。
+
+### プレハブを使わない場合
+
+1. 任意のコライダーをオブジェクトに追加する。
+2. `Is Trigger` のチェックをつける。
+3. [AreaDescription](doc:AreaDescription) コンポーネントをオブジェクトを追加する。
+4. 一意のエリアIDを設定する。
+5. コライダー範囲を調整する。
+
+:::info
+各種コライダーのバリエーションのプレハブがあるため、そちらを使用することを推奨します。
+:::
+
+## マイクを配置する。
+### 同一エリア内に聞こえるマイクを配置する
+`Assets/Hanataba/Udon/HanatabaSoundManager/Prefab/AreaMic.prefab` を配置。
+
+### 別のエリアでも聞こえるマイクを配置する
+`Assets/Hanataba/Udon/HanatabaSoundManager/Prefab/GlobalMic.prefab` を配置。
+:::info
+こちらはデフォルトですべてのエリアで聞こえるようになっています。
+聞こえるエリアを制限したい場合は、パススルーエリアの設定を行ってください。
+:::
